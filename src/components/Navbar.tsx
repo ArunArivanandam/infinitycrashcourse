@@ -11,7 +11,6 @@ import {
   CreditCardIcon,
   GraduationCap,
   LogOutIcon,
-  ZapIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -33,14 +32,6 @@ const Navbar = () => {
         >
           <BookOpenIcon className="size-4" />
           <span className="hidden sm:inline">Courses</span>
-        </Link>
-
-        <Link
-          href={"/pro"}
-          className="flex items-center gap-1 px-3 py-2 rounded-md text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
-        >
-          <ZapIcon className="size-4" />
-          <span className="hidden sm:inline">Pro</span>
         </Link>
 
         <SignedIn>

@@ -13,6 +13,7 @@ import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import PurchaseButton from "@/components/PurchaseButton";
 // import PurchaseButton from "@/components/PurchaseButton";
 
 export default async function Home() {
@@ -57,7 +58,9 @@ export default async function Home() {
                   ${course.price.toFixed(2)}
                 </Badge>
 
-                <SignedIn>Enroll</SignedIn>
+                <SignedIn>
+                  <PurchaseButton courseId={course._id} />
+                </SignedIn>
 
                 <SignedOut>
                   <SignInButton mode="modal">
